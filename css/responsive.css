@@ -1,0 +1,214 @@
+/* ==========================================================================
+   SpendWise - Responsive Viewport Breakpoints & Media Queries
+   Mobile: 360px - 767px
+   Tablet: 768px - 1023px
+   Desktop: 1024px - 1280px+
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet & Smaller Desktops (< 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+
+  .stat-card {
+    padding: var(--space-4);
+  }
+
+  .stat-value {
+    font-size: var(--font-size-2xl);
+  }
+
+  .toolbar-primary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .action-buttons-group {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet Portrait & Medium Devices (< 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .app-container {
+    padding: var(--space-3) var(--space-3) var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .header-inner {
+    padding: var(--space-3) var(--space-3);
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .user-name-display {
+    max-width: 90px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .budget-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .budget-warning-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .banner-action-btn {
+    align-self: flex-start;
+  }
+
+  .toolbar-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .type-pills-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  .filter-selects-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .select-control {
+    width: 100%;
+  }
+
+  /* Table becomes mobile-friendly card view */
+  .transaction-table thead {
+    display: none;
+  }
+
+  .transaction-table,
+  .transaction-table tbody,
+  .transaction-table tr,
+  .transaction-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .transaction-table tbody tr {
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--space-3) var(--space-4);
+    position: relative;
+  }
+
+  .transaction-table td {
+    padding: var(--space-1) 0;
+    border: none;
+  }
+
+  .tx-item-cell {
+    margin-bottom: var(--space-1);
+  }
+
+  .tx-amount-cell {
+    text-align: left;
+    font-size: var(--font-size-lg);
+    margin: var(--space-1) 0;
+  }
+
+  .tx-date-cell {
+    display: inline-block;
+    margin-right: var(--space-2);
+  }
+
+  .tx-actions-cell {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    display: flex;
+    gap: 4px;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    max-width: 95vw;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Screens (360px - 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: var(--font-size-base);
+  }
+
+  .brand-badge {
+    display: none;
+  }
+
+  .user-name-display {
+    display: none;
+  }
+
+  .user-profile-btn {
+    padding: 3px;
+    border-radius: var(--radius-full);
+  }
+
+  .action-buttons-group {
+    flex-direction: column;
+  }
+
+  .action-buttons-group .btn {
+    width: 100%;
+  }
+
+  .filter-selects-group {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-value {
+    font-size: var(--font-size-xl);
+  }
+
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+  }
+}
